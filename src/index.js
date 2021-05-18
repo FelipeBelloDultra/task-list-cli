@@ -3,9 +3,9 @@ const readline = require('readline-sync');
 const { options } = require('./config/options');
 const { getJob } = require('./jobs/getJob');
 
-const verifyTheTmpFolderExists = require('./helpers/verifyTheTmpFolderExists');
+require('./helpers/verifyTheTmpFolderExists')();
 
-verifyTheTmpFolderExists();
+console.clear();
 
 const descriptionOptions = options.map(option => option.description);
 
